@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .menu {
+      float: left;
+      width: 20%;
+    }
+
+    .menuitem {
+      padding: 8px;
+      margin-top: 7px;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    .main {
+      float: left;
+      width: 60%;
+      padding: 0 20px;
+      overflow: hidden;
+    }
+
+    .right {
+      background-color: lightblue;
+      float: left;
+      width: 20%;
+      padding: 10px 15px;
+      margin-top: 7px;
+    }
+
+    @media only screen and (max-width:800px) {
+
+      /* For tablets: */
+      .main {
+        width: 80%;
+        padding: 0;
+      }
+
+      .right {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width:500px) {
+
+      /* For mobile phones: */
+      .menu,
+      .main,
+      .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body style="font-family:Verdana;">
+
+  <div style="background-color:#f1f1f1;padding:15px;">
+    <h1>About Us</h1>
+    <h3>Here is About TechClub</h3>
+  </div>
+
+  <div style="overflow:auto">
+    <div class="menu">
+      <a href="profile.html"><div class="menuitem">Profile</div></a>
+      <a href="achievment.html"><div class="menuitem">Achievments</div></a>
+      <a href="gallery.html"><div class="menuitem">Gallery</div></a>
+    </div>
+
+    <div class="main">
+      <h2>About Us Profile</h2>
+      <p>welcome to the Technical Club, an open platform that transcends traditional limitations. Immerse yourself in a
+        dynamic community where technology is not just a tool but a passion that binds us together. The Technical Club
+        is more than just a gathering; it's an ecosystem of limitless possibilities, a playground for the curious minds
+        that seek to push the boundaries of what is possible. Here, we celebrate the spirit of exploration, turning the
+        abstract world of code and circuits into a canvas for creativity. Whether you're a seasoned developer, a budding
+        enthusiast, or just someone with an insatiable curiosity for the technological realm, this is your space to
+        thrive.</p>
+      <img src="img/logo.jpg" style="width:100%">
+    </div>
+
+    <div class="right">
+      <h2>What?</h2>
+      <p>Technical Club, an open platform that transcends traditional limitations.Immerse yourself in a
+        dynamic community where technology is not just a tool but a passion that binds us together.</p>
+      <h2>Where?</h2>
+      <p>On the south asian cost of the India, south of the city Bihar.</p>
+      <!--<h2>Price?</h2>
+      <p>The Walk is free!</p>-->
+    </div>
+  </div>
+
+
+  <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This web page is
+    a part of a demonstration of fluid web design made by <b>Tech Club</b> Resize the browser window to see the content
+    respond to the resizing.</div>
+
+</body>
+
+</html>

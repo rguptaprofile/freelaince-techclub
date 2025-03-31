@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+            font-family: arial;
+            background-color: slategrey;
+        }
+
+        .card img {
+
+            border-radius: 80%;
+            max-width: 5%;
+
+        }
+
+        .h2-font h2 {
+            background-color: slategrey;
+            width: 100%;
+            height: 50%;
+            padding: 2%;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .title {
+
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: auto;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+
+        .profile-body1 {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: aliceblue;
+            padding: 1%;
+            margin-top: auto;
+
+        }
+
+
+        .profile-body2 {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: aliceblue;
+            padding: 1%;
+            margin-top: auto;
+        }
+
+
+        .profile1 {
+            font-size: large;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        .profile2 {
+            font-size: large;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /*.h5 {
+    background-color: aliceblue;
+}*/
+    </style>
+
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border: 4px;
+            border-radius: 250px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+
+        }
+
+        @media all and (min-width: 1oo1px) {
+            .navbar background {
+                content: " (" attr(nav-list) ")";
+
+            }
+        }
+
+        @media all and (max-width: 1000px) and (min-width: 700px),
+        (min-width: 1151px) {}
+
+
+
+
+
+        .nav-list {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 26px 30px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-list li a:hover {
+            color: grey;
+        }
+
+        .rightnav {
+            width: 50%;
+            text-align: right;
+            padding: 0 23px;
+        }
+
+        #search {
+            padding: 5px;
+            font-size: 17px;
+            border: 2px solid grey;
+            border-radius: 9px;
+        }
+
+        .background {
+            background: rgba(0, 0, 0, 0.7) url(../img/bg.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .firstsection {
+            height: 100vh;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 50%;
+            margin: auto;
+            height: 80%;
+        }
+
+        .firsthalf {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .secondhalf {
+            width: 30%;
+            height: 30%;
+        }
+
+        .secondhalf img {
+            width: 90%;
+            border: 3px solid white;
+            border-radius: 250px;
+            display: block;
+            margin: auto;
+            height: 80%;
+        }
+
+        .text-big {
+            font-size: 38px;
+        }
+
+        .text-small {
+            font-size: 16px;
+        }
+
+        /*@media all and (min-width: 1001px) */
+
+        .btn {
+            padding: 8px 20px;
+            margin: 7px 0;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .navigation {
+            font-family: var(--font1);
+            height: 74px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            font-size: 20px;
+            display: flex;
+            color: rgb(180, 12, 12);
+
+        }
+
+        .nav-left ul {
+            display: flex;
+            align-items: center;
+            margin: 0 77px;
+            font-size: 18px;
+
+        }
+
+        .nav-left ul li {
+            list-style: none;
+            margin: 0 14px;
+            font-family: var(--font2);
+            transition: all 0.3s ease-in-out;
+
+
+        }
+
+        .nav-left ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /*.nav-left ul li a:hover {
+        color: var(--main-bg-color);
+        transition: all 0.3s ease-in-out;
+}*/
+
+        .nav-left ul li a:hover {
+            color: var(--main-bg-color);
+            font-weight: bolder;
+
+        }
+
+
+
+
+        .content-left {
+            font-family: var(--font1);
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: blue;
+            background-color: aliceblue;
+
+        }
+
+        .content-right {
+
+            width: 50%;
+            background-color: aliceblue;
+
+        }
+
+        .content-right img {
+            height: 200px;
+            /*padding-top: 8%;*/
+            margin-top: 17%;
+            margin-left: 70px;
+            /*border: 1px solid black;*/
+            border-radius: 100px;
+
+
+        }
+
+        .home-articles {
+            height: 3660px;
+            /*background-color: grey;*/
+
+        }
+
+        .home-articles1 {
+            height: 10600px;
+            /*background-color: grey;*/
+
+        }
+
+        .home-article {
+            align-items: center;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: aliceblue;
+        }
+
+        .home-article1 {
+            align-items: center;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: aliceblue;
+        }
+
+        .main-content {
+            align-items: center;
+            /*color: rgb(235, 113, 32);*/
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-container {
+            float: left;
+            width: 30%;
+            padding: 1px;
+            margin-right: auto;
+            margin-left: 18px;
+            -ms-flex-align: center;
+
+
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+
+        /*.home-articles{}*/
+
+        .content {
+            height: 395px;
+            /*background-color: dark white;*/
+            display: flex;
+            margin-top: 32px;
+        }
+
+        .header-content {
+            color: rgb(9, 206, 196);
+        }
+
+        .content-content {
+            color: black;
+        }
+
+        .bihar-content {
+            color: brown;
+        }
+
+        .sub-content {
+            color: brown;
+        }
+
+
+        .social-media li img {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .social-media li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /*.social-media li a {
+    height: 100px;
+    width: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}*/
+
+
+        .footer-main {
+            align-items: center;
+            color: rgb(129, 9, 9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 40px;
+        }
+
+        .footer-media {
+            align-items: center;
+            display: flex;
+
+            justify-content: center;
+            height: 45px;
+        }
+
+        .footer {
+            height: 300px;
+            background-color: #797474;
+            /*display: table-footer-group;*/
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+
+
+        }
+    </style>
+
+
+
+
+    <style>
+        @media screen and (max-width: 10%) {
+
+
+
+            @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+            :root {
+                --main-bg-color: rgb(108, 154, 166);
+                --font1: 'baloo bhaiya 2', cursive: --font2: 'baloo bhaiya 2', cursive:
+            }
+
+            .max-width-1 {
+                max-width: 80vw;
+
+            }
+
+            .max-width-2 {
+                max-width: 100vw;
+
+            }
+
+            .m-auto {
+                margin: auto;
+
+            }
+
+            .btn {
+                padding: 0px 20px;
+                padding-top: 2px;
+                border: 2px solid black;
+                border-radius: 6px;
+                font-family: var(--font1);
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .btn:hover {
+                color: white;
+                background-color: var(--main-bg-color);
+            }
+
+
+            .form-input {
+                padding: 0 5px;
+                padding-top: 2px;
+                font-size: 16px;
+                border: 2px solid black;
+                border-radius: 4px;
+                margin: 0 13px;
+                font-family: var(--font1);
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="h2-font">
+        <h2>About Our Founder & Company Profile.</h2>
+    </div>
+
+    <div class="card"><br>
+        <img src="img/rahul img1.jpg" alt="rahul img1">
+        <h1>Rahul Gupta</h1>
+        <p class="title">CEO & Founder, Rahul Gupta</p>
+        <p>Tech Club.</p>
+        <div style="margin: 24px 0;">
+            <a href="https://www.linkedin.com/in/rahul-gupta-33a6a225b"><i class="fa fa-linkedin"></i></a>
+            <a href="https://x.com/Rahul_Gupta112"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/rraj.hru"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-Quora"></i></a>
+        </div>
+        <p>
+        <ul>
+            <li><a href="contact.html"><button>CONTACT</button></a></li>
+        </ul>
+        </p><br>
+
+
+    </div>
+
+    <h5>
+        <div class="profile-body1">
+
+            <div class="profile1">
+
+                <b>Introduction :</b>
+
+            </div> <br><br>
+
+            1. Background and early life
+            Initial inspirations and challenges
+            Educational Journey <br>
+
+            2. Academic achievements
+            Influential mentors and experiences
+            Career Path Before Tech Club <br>
+
+            3. Early job experiences
+            Key lessons learned in the industry
+            Founding Tech Club <br>
+
+            4. Vision and mission behind the company
+            Initial struggles and breakthroughs
+            Leadership Philosophy <br>
+
+            5. Collaborative approach
+            Emphasis on diversity and inclusion
+            Achievements and Milestones <br>
+
+            6. Major accomplishments of Tech Club
+            Impact on the tech community
+            Community Engagement <br>
+
+            7. Outreach programs and initiatives
+            Contributions to education and social causes
+            Personal Life and Interests <br>
+
+            8. Hobbies and passions outside of work
+            Balancing work and personal life
+            Vision for the Future <br>
+
+            Future goals for Tech Club
+            The evolving landscape of technology
+            Conclusion
+        </div>
+
+
+        <div class="profile-body2">
+
+            <div class="profile2">
+
+                <b>Legacy and listing impact on the tech industry
+                    Introduction (Expanded) :</b>
+
+            </div> <br><br>
+
+            Rahul Gupta, the innovative founder and CEO of Tech Club, embodies the spirit of entrepreneurship and the
+            transformative power of technology. Growing up in a small town, Rahul’s early fascination with computers
+            sparked a lifelong passion for understanding how technology shapes our world. His journey began with humble
+            beginnings, characterized by curiosity and determination. As a child, he often dismantled household gadgets,
+            intrigued by the inner workings and potential for improvement. This innate curiosity laid the foundation for
+            a career dedicated to pushing boundaries and inspiring others. <br>
+
+            With an unwavering commitment to his vision, Rahul pursued a degree in computer science at a prestigious
+            university, where he not only excelled academically but also discovered the importance of collaboration and
+            mentorship. Influential professors and fellow students ignited his desire to create a space where technology
+            enthusiasts could come together to learn and innovate. This experience not only shaped his technical skills
+            but also solidified his belief in the power of community. <br>
+
+            Upon entering the professional world, Rahul navigated various roles within the tech industry, from startups
+            to established corporations. Each position presented unique challenges that tested his resilience and
+            creativity. He learned valuable lessons about leadership, teamwork, and the significance of fostering an
+            inclusive environment. These experiences would prove instrumental when he founded Tech Club in 2015, a
+            platform designed to connect aspiring technologists with industry leaders and resources. <br>
+
+            Under Rahul’s guidance, Tech Club has flourished, becoming a hub for creativity, collaboration, and
+            continuous learning. His leadership philosophy revolves around empathy and empowerment, ensuring that every
+            voice is heard and valued. By championing diversity and inclusivity, Rahul has cultivated a culture where
+            individuals from all backgrounds can thrive, leading to groundbreaking innovations that resonate throughout
+            the tech landscape. <br>
+
+            Rahul’s achievements extend beyond the success of Tech Club. He is a passionate advocate for social
+            responsibility, dedicating his time and resources to initiatives that promote education and accessibility in
+            technology. Through outreach programs, mentorship opportunities, and partnerships with educational
+            institutions, he strives to inspire the next generation of tech leaders. <br>
+
+            As Tech Club continues to evolve, Rahul remains steadfast in his vision for the future. He envisions a world
+            where technology serves as a force for good, empowering individuals and transforming communities. His legacy
+            is not only defined by his accomplishments but also by the countless lives he has touched and inspired along
+            the way. <br> <br>
+
+
+
+            Rahul Gupta, the innovative Founder and CEO of Tech Club, stands at the forefront of a technology revolution
+            that is shaping the future of how we connect, collaborate, and create. With a remarkable vision and an
+            unyielding passion for technology, Rahul established Tech Club as a sanctuary for tech enthusiasts,
+            entrepreneurs, and professionals eager to explore the boundless possibilities of the digital age. His
+            journey
+            began in a small town where he first discovered his fascination for technology as a child, tinkering with
+            gadgets and dreaming of a world where technology could solve everyday problems. With a degree in Computer
+            Science and a wealth of experience in the tech industry, Rahul set out to create a community that not only
+            embraces innovation but also nurtures the next generation of tech leaders. <br>
+
+            Under his leadership, Tech Club has grown from a modest idea into a thriving global community, attracting
+            thousands of members who share a common goal: to push the boundaries of technology and inspire
+            transformative
+            change. Rahul’s commitment to fostering a culture of collaboration and creativity is evident in the array of
+            programs offered by Tech Club, including hands-on workshops, hackathons, and mentorship opportunities that
+            empower individuals to turn their ideas into reality. His approach emphasizes inclusivity, recognizing that
+            diversity drives innovation. Through partnerships with educational institutions and organizations, Tech Club
+            has
+            created pathways for underrepresented groups in tech, ensuring that every voice is heard and valued. <br>
+
+            One of Rahul's hallmark initiatives is the Tech for Good program, which seeks to leverage technology to
+            address
+            pressing social issues, from environmental sustainability to educational access. By rallying the collective
+            expertise of Tech Club members, Rahul has spearheaded projects that not only showcase technological prowess
+            but
+            also create meaningful impact in communities worldwide. His vision extends beyond just business success; he
+            believes in the responsibility of tech leaders to contribute positively to society. <br>
+
+            Rahul’s leadership style is characterized by transparency, empathy, and a strong commitment to continuous
+            learning. He regularly engages with members, listening to their ideas and feedback, which has fostered a
+            sense
+            of belonging and ownership within the community. His belief in lifelong learning is reflected in Tech Club’s
+            diverse curriculum, which evolves in tandem with the rapidly changing tech landscape. From artificial
+            intelligence and blockchain to ethical hacking and data science, Rahul ensures that members are equipped
+            with
+            the skills and knowledge they need to thrive in an increasingly competitive environment. <br>
+
+            Tech Club’s annual conference, which draws industry leaders and aspiring innovators alike, has become a
+            hallmark
+            event under Rahul's stewardship. The conference not only showcases groundbreaking technologies but also
+            facilitates discussions on the future of tech and its societal implications. Rahul is often found leading
+            panels
+            and workshops, sharing his insights on trends and challenges, and inspiring others with his journey of
+            resilience and innovation. <br>
+
+            Beyond the conference and community initiatives, Rahul has positioned Tech Club as a thought leader in the
+            tech
+            space, with a strong online presence that includes webinars, podcasts, and a vibrant blog featuring
+            contributions from industry experts and members. This platform not only serves as a resource for learning
+            but
+            also as a space for sharing success stories, challenges, and breakthroughs that resonate with a global
+            audience.
+            <br>
+
+            As a mentor and advocate for aspiring entrepreneurs, Rahul understands the struggles of starting a business
+            in
+            today’s competitive landscape. He has launched an incubator program within Tech Club that provides
+            resources,
+            funding, and guidance to nascent startups. This initiative has already led to the successful launch of
+            numerous
+            tech startups that are making waves in their respective fields, from health tech to fintech, embodying the
+            spirit of innovation that Rahul champions. <br>
+
+            Rahul Gupta’s vision for Tech Club is not limited to its current success; he constantly seeks new avenues
+            for
+            growth and impact. He envisions expanding Tech Club's reach to underserved regions, providing access to
+            technology education and resources that can empower individuals to change their circumstances. His ultimate
+            goal
+            is to create a global network of tech-savvy individuals who are not only proficient in technology but are
+            also
+            committed to using their skills for the greater good. <br>
+
+            In an era where technology can often feel isolating, Rahul strives to make Tech Club a place where
+            connections
+            flourish. He believes that the most profound innovations emerge from collaboration and that the best ideas
+            often
+            come from unexpected places. By fostering an environment where everyone feels encouraged to share their
+            perspectives and experiences, Rahul is not just building a company; he is cultivating a movement that
+            redefines
+            the relationship between technology and humanity. <br>
+
+            Through his relentless drive and unwavering commitment, Rahul Gupta is not only leading Tech Club but is
+            also
+            shaping the future of technology itself—one that is inclusive, responsible, and profoundly impactful. As he
+            looks to the future, he remains dedicated to empowering individuals to embrace their potential and harness
+            the
+            power of technology to create a better world for all. <br>
+
+
+            Feel free to expand each section with more details, anecdotes, and examples to reach your desired length! If
+            you'd like me to elaborate on a specific section or concept, just let me know!
+
+        </div>
+
+
+    </h5> <br>
+
+
+
+    <div class="footer">
+        <div class="footer-main">
+            <div class="content-content">
+
+                <p><br><br><br> welcome to the Technical Club, an open platform that transcends traditional
+                    limitations. Immerse yourself in a dynamic community where technology is not just a tool but a
+                    passion that binds us together.
+
+                    The Technical Club is more than just a gathering; it's an ecosystem of limitless possibilities, a
+                    playground for the curious minds that seek to push the boundaries of what is possible. Here, we
+                    celebrate the spirit of exploration, turning the abstract world of code and circuits into a canvas
+                    for creativity. Whether you're a seasoned developer, a budding enthusiast, or just someone with an
+                    insatiable curiosity for the technological realm, this is your space to thrive.</p>
+            </div>
+        </div><br><br><br>
+
+
+        <div class="footer-media">
+            <div class="social-media">
+                <div class="nav-left">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/rahul-gupta-33a6a225b"><img src="img/linkedin logo.png"
+                                    alt="">Linkedin</a>
+                        </li>
+
+                        <li><a href="https://www.facebook.com/rraj.hru"><img src="img/facebook logo.png"
+                                    alt="">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/mr_perfect1_rahul/"><img src="img/instragram logo.png"
+                                    alt="">Instragram</a></li>
+                        <li><a href="https://www.quora.com/profile/RAHUL-RAJ-10235"><img src="img/quora logo.png"
+                                    alt="">Quora</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="footer-main">Aurangabad, Bihar, India - 824120.</div>
+
+        <div class="footer-main"> Copyright &copy; 'Tech Club' All Right Reserved.
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

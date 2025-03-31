@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<br><br><br>
+
+<body bgcolor="f2f2f2">
+
+    <div class="container">
+
+        <form action="/action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname"><b>First Name</b></label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname"><b>Last Name</b></label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country"><b>Country</b></label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        <option value="california">California</option>
+                        <option value="china">China</option>
+                        <option value="russia">Russia</option>
+                        <option value="france">france</option>
+                        <option value="germany">Germany</option>
+                        <option value="japan">Japan</option>
+                        <option value="southKorea">South Korea</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="saudiArabia">Saudi Arabia</option>
+                        <option value="unitedKingdom">United Kingdom (UK)</option>
+                        <option value="bangladesh">Bangladesh</option>
+                        <option value="nepal">Nepal</option>
+                        <option value="bhutan">Bhutan</option>
+                        <option value="srilanka">Sri Lanka</option>
+                        <option value="afganistan">Afganistan</option>
+                        <option value="myanmar">Myanmar</option>
+                        <option value="uae">U A E</option>
+                        <option value="bali">Bali</option>
+                        <option value="mauritius">Mauritius</option>
+                        <option value="sweetzerland">Sweetzerland</option>
+                        <option value="maldive">Maldive</option>
+                        <option value="australia">Australia</option>
+                        <option value="southafrica">South Africa</option>
+                        <option value="newzeland">Newzeland</option>
+                        <option value="westindies">West Indies</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="turkey">Turkey</option>
+                        <option value="indonesia">Indonesia</option>
+                        <option value="itlay">Italy</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="iran">Iran</option>
+                        <option value="israel">Israel</option>
+                        <option value="netherland">Netherland</option>
+                        <option value="norway">Norway</option>
+                        <option value="philippines">Philippines</option>
+                        <option value="poland">Poland</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="spain">Spain</option>
+                        <option value="qatar">Qatar</option>
+                        <option value="taiwan">Taiwan</option>
+                        <option value="hongkong">Hong Kong</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="egypt">Egypt</option>
+                        <option value="greece">Greece</option>
+                        <option value="hungary">Hungary</option>
+                        <option value="iceland">Iceland</option>
+                        <option value="iran">Iran</option>
+                        <option value="morocco">Morocco</option>
+                        <option value="luxembourg">Luxembourg</option>
+                        <option value="mongolia">Mongolia</option>
+
+
+
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject"><b>Subject</b></label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

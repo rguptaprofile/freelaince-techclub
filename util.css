@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+:root {
+    --main-bg-color: rgb(108, 154, 166);
+    --font1: 'baloo bhaiya 2', cursive: --font2: 'baloo bhaiya 2', cursive:
+}
+
+.max-width-1 {
+    max-width: 80vw;
+
+}
+
+.max-width-2 {
+    max-width: 100vw;
+    
+}
+
+.m-auto {
+    margin: auto;
+
+}
+
+.btn {
+    padding: 0px 20px;
+    padding-top: 2px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: var(--font1);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    color: white;
+    background-color: var(--main-bg-color);
+}
+
+
+.form-input {
+    padding: 0 5px;
+    padding-top: 2px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 0 13px;
+    font-family: var(--font1);
+}
